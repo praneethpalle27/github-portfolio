@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praneeth Krishna Palle - Mechanical Engineer Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .section-padding {
+            padding: 4rem 1rem;
+        }
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 6rem 2rem;
+            }
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .modal-overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .custom-gradient {
+            background: linear-gradient(to right, #6366f1, #8b5cf6); /* Indigo to Violet */
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-700 rounded-lg p-2 hover:bg-gray-100 transition duration-300">Praneeth K. Palle</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-100">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-100">About</a>
+                <a href="#skills" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-100">Skills</a>
+                <a href="#experience" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-100">Experience</a>
+                <a href="#projects" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-100">Projects</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-100">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
+            <a href="#home" class="block px-4 py-2 text-gray-700 hover:bg-indigo-100 rounded-lg mx-2 my-1">Home</a>
+            <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-indigo-100 rounded-lg mx-2 my-1">About</a>
+            <a href="#skills" class="block px-4 py-2 text-gray-700 hover:bg-indigo-100 rounded-lg mx-2 my-1">Skills</a>
+            <a href="#experience" class="block px-4 py-2 text-gray-700 hover:bg-indigo-100 rounded-lg mx-2 my-1">Experience</a>
+            <a href="#projects" class="block px-4 py-2 text-gray-700 hover:bg-indigo-100 rounded-lg mx-2 my-1">Projects</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-indigo-100 rounded-lg mx-2 my-1">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="custom-gradient text-white text-center py-20 md:py-32 flex items-center justify-center min-h-screen-minus-header">
+            <div class="container mx-auto px-4">
+                <div class="relative w-32 h-32 mx-auto mb-6 rounded-full bg-indigo-500 flex items-center justify-center shadow-lg">
+                    <!-- Placeholder for profile image -->
+                    <i class="fas fa-user-tie text-6xl text-white"></i>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down">
+                    PRANEETH KRISHNA PALLE
+                </h1>
+                <p class="text-xl md:text-2xl font-light mb-8 animate-fade-in-up">
+                    Mechanical Engineer | FEA, CAD, Lean Manufacturing | Design Optimization & Automation Specialist
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in-up">
+                    <a href="mailto:praneethpalle27@gmail.com" class="bg-white text-indigo-700 hover:bg-indigo-100 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-envelope mr-2"></i> Email Me
+                    </a>
+                    <a href="https://www.linkedin.com/in/yourlinkedinprofile" target="_blank" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-indigo-700 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition duration-300 transform hover:scale-105">
+                        <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
+                    </a>
+                    <!-- Replace with actual resume link if available -->
+                    <a href="https://placehold.co/200x200/cccccc/ffffff?text=Resume" target="_blank" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-indigo-700 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-file-alt mr-2"></i> Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section-padding bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">About Me</h2>
+                <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <img src="https://placehold.co/600x400/ececec/333333?text=About+Me+Image" alt="About Me" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                    </div>
+                    <div class="md:w-1/2 text-lg text-gray-700 leading-relaxed">
+                        <p class="mb-4">
+                            I am a driven Mechanical Design Engineer and an automotive enthusiast. With a deep passion for mechanical system design, lean process design, and automation, I am dedicated to pushing the boundaries of engineering.
+                        </p>
+                        <p class="mb-4">
+                            My experience spans material flow optimization, system architecture, and design validation using industry-standard tools like ANSYS and SolidWorks. I possess a strong background in process improvement, data-driven analysis, and mechanical design tailored for manufacturing environments.
+                        </p>
+                        <p>
+                            Beyond my technical endeavors, I am also a passionate table tennis player. I pride myself on hard work, a penchant for rapid learning, and an unwavering commitment to contributing my expertise to innovative projects while continuously expanding my knowledge in the field.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section-padding bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Technical Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Programming Languages -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                        <h3 class="text-2xl font-semibold mb-4 text-indigo-700"><i class="fas fa-code mr-3"></i>Programming Languages</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>C</li>
+                            <li>Python</li>
+                            <li>MATLAB</li>
+                        </ul>
+                    </div>
+                    <!-- Software Development Tools -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                        <h3 class="text-2xl font-semibold mb-4 text-indigo-700"><i class="fas fa-tools mr-3"></i>Software Development Tools</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Arduino IDE</li>
+                            <li>ROS</li>
+                            <li>Git (version control)</li>
+                            <li>Simulink</li>
+                        </ul>
+                    </div>
+                    <!-- Frameworks & Libraries -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                        <h3 class="text-2xl font-semibold mb-4 text-indigo-700"><i class="fas fa-cubes mr-3"></i>Frameworks & Libraries</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>TensorFlow (Machine Learning)</li>
+                            <li>Tableau (Data Visualization)</li>
+                        </ul>
+                    </div>
+                    <!-- Mechanical Design & Analysis -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                        <h3 class="text-2xl font-semibold mb-4 text-indigo-700"><i class="fas fa-drafting-compass mr-3"></i>Mechanical Design & Analysis</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>SolidWorks</li>
+                            <li>ANSYS Workbench</li>
+                            <li>Autodesk Fusion 360</li>
+                            <li>GDNT</li>
+                        </ul>
+                    </div>
+                    <!-- Core Concepts -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                        <h3 class="text-2xl font-semibold mb-4 text-indigo-700"><i class="fas fa-lightbulb mr-3"></i>Core Concepts</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Object-Oriented Programming</li>
+                            <li>Data Structures</li>
+                            <li>Algorithm Design</li>
+                        </ul>
+                    </div>
+                    <!-- Additional Skills -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                        <h3 class="text-2xl font-semibold mb-4 text-indigo-700"><i class="fas fa-plus-circle mr-3"></i>Additional Skills</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Basic API integration (Arduino-based systems)</li>
+                            <li>Automation Programming</li>
+                            <li>Lean Manufacturing</li>
+                            <li>Material Flow Analysis</li>
+                            <li>Process Optimization</li>
+                            <li>Certification: Lean Six Sigma Green Belt</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section-padding bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Education</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Master's Degree -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                        <h3 class="text-2xl font-semibold mb-2 text-indigo-700">Master of Science in Mechanical Engineering</h3>
+                        <p class="text-lg text-gray-700 mb-1">Arizona State University, Tempe, AZ, US</p>
+                        <p class="text-md text-gray-600 mb-2">May 2025</p>
+                        <p class="text-lg text-gray-700">GPA: 3.40/4.0</p>
+                    </div>
+                    <!-- Bachelor's Degree -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+                        <h3 class="text-2xl font-semibold mb-2 text-indigo-700">Bachelors of Technology in Mechanical Engineering</h3>
+                        <p class="text-lg text-gray-700 mb-1">Shiv Nadar University, Greater Noida UP, India</p>
+                        <p class="text-md text-gray-600 mb-2">May 2023</p>
+                        <p class="text-lg text-gray-700">GPA: 7.94/10.00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section-padding bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Professional Experience</h2>
+                <div class="space-y-10">
+                    <!-- HBL Power Systems -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 flex flex-col md:flex-row items-start md:space-x-8">
+                        <div class="flex-shrink-0 mb-4 md:mb-0">
+                            <img src="https://placehold.co/120x120/ddeeff/333333?text=HBL" alt="HBL Power Systems Logo" class="rounded-full w-24 h-24 object-cover">
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-indigo-700">Mechanical Engineer Intern</h3>
+                            <p class="text-xl text-gray-800 mb-2">HBL Power Systems | Hyderabad, India</p>
+                            <p class="text-md text-gray-600 mb-4">January 2023 - May 2023</p>
+                            <ul class="list-disc list-outside ml-5 text-gray-700 space-y-2">
+                                <li>Developed an Arduino-based automated system for micro-porous sheet folding and heating, enhancing production efficiency for NCFP batteries by 20%.</li>
+                                <li>Integrated sensors for real-time monitoring of temperature, pressure, and alignment, achieving a 15% reduction in errors and consistent product quality.</li>
+                                <li>Increased throughput by 20% and minimized labor costs, streamlining the process and ensuring higher battery reliability through automation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- HYT Engineering Private Ltd -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 flex flex-col md:flex-row items-start md:space-x-8">
+                        <div class="flex-shrink-0 mb-4 md:mb-0">
+                            <img src="https://placehold.co/120x120/ddeeff/333333?text=HYT" alt="HYT Engineering Logo" class="rounded-full w-24 h-24 object-cover">
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-indigo-700">Mechanical Design Intern</h3>
+                            <p class="text-xl text-gray-800 mb-2">HYT Engineering Private Ltd | Pune, India</p>
+                            <p class="text-md text-gray-600 mb-4">June 2021 - August 2021</p>
+                            <ul class="list-disc list-outside ml-5 text-gray-700 space-y-2">
+                                <li>Designed the BIW framework for a Rail-Cum-Road Vehicle (RCRV) using SolidWorks, employing 3D modeling and FEA simulations to ensure structural integrity.</li>
+                                <li>Collaborated with product leaders, completed 12+ design iterations and achieved a 10% error reduction.</li>
+                                <li>Optimized the design for manufacturing, minimized material waste with detailed technical documentation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-padding bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">My Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Cards will be dynamically loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Modal (hidden by default) -->
+        <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 z-50 hidden modal-overlay">
+            <div class="bg-white rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto p-8 relative">
+                <button id="close-modal-button" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-3xl transition duration-300">
+                    <i class="fas fa-times-circle"></i>
+                </button>
+                <h3 id="modal-title" class="text-3xl font-bold text-indigo-700 mb-6"></h3>
+                <div class="mb-6">
+                    <img id="modal-image" src="" alt="Project Image" class="rounded-lg w-full h-auto mb-4 object-cover max-h-80">
+                    <p id="modal-overview" class="text-gray-700 text-lg"></p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-2xl font-semibold text-gray-800 mb-3"><i class="fas fa-question-circle mr-2"></i>What?</h4>
+                        <p id="modal-what" class="text-gray-700 leading-relaxed"></p>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-semibold text-gray-800 mb-3"><i class="fas fa-cogs mr-2"></i>How?</h4>
+                        <p id="modal-how" class="text-gray-700 leading-relaxed"></p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <h4 class="text-2xl font-semibold text-gray-800 mb-3"><i class="fas fa-award mr-2"></i>Result.</h4>
+                        <p id="modal-result" class="text-gray-700 leading-relaxed"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding custom-gradient text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold mb-8">Get In Touch</h2>
+                <p class="text-xl mb-8 leading-relaxed max-w-2xl mx-auto">
+                    I'm always open to new opportunities and collaborations. Feel free to reach out!
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="mailto:praneethpalle27@gmail.com" class="bg-white text-indigo-700 hover:bg-indigo-100 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-envelope mr-2"></i> praneethpalle27@gmail.com
+                    </a>
+                    <a href="tel:+16236636057" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-indigo-700 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-phone mr-2"></i> +1-623-663-6057
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Praneeth Krishna Palle. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://www.linkedin.com/in/yourlinkedinprofile" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
+                    <i class="fab fa-linkedin-in text-2xl"></i>
+                </a>
+                <!-- Add other social media links if desired -->
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth Scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Project Data
+        const projects = [
+            {
+                id: 'pcb-design',
+                title: 'PCB Design for Dynamic Surface',
+                shortDescription: 'Designed a PCB to control 180 servos for a dynamic rubber sheet in wind tunnel experiments.',
+                imageUrl: 'https://placehold.co/600x400/ffddcc/333333?text=PCB+Design',
+                what: 'Designed a PCB to control 180 servos for a dynamic rubber sheet used in wind tunnel experiments. Implemented sinusoidal and cosine wave patterns to study boundary layers and particle image velocimetry (PIV). Integrated precise control algorithms and advanced sensor feedback for accurate piston movements.',
+                how: 'Utilized KiCad to design the PCB, incorporating servo control ICs and a Raspberry Pi Pico for processing power and GPIO availability. Selected appropriate components to ensure precise servo control and minimize noise and interference. Developed control algorithms to generate sinusoidal and cosine wave patterns, essential for aerodynamic studies. Integrated advanced sensor feedback to adjust movements in real time, maintaining high precision. Ensured the synchronization of 180 servos to create a cohesive dynamic surface.',
+                result: 'The dynamic surface movements were controlled with high precision, enabling accurate aerodynamic studies. The integration of sensor feedback allowed the system to adapt movements in real-time, enhancing reliability. Demonstrated the feasibility of using a dynamic surface in wind tunnel experiments, paving the way for more advanced studies. The project improved the efficiency and effectiveness of wind tunnel experiments by providing a versatile and controllable surface.'
+            },
+            {
+                id: 'tri-finger-robot',
+                title: 'Tri-Finger Robot',
+                shortDescription: 'Supervised the design and implementation of a Tri-Finger Robot focusing on sensor systems, kinematic algorithms, and ML integration.',
+                imageUrl: 'https://placehold.co/600x400/ccffdd/333333?text=Tri-Finger+Robot',
+                what: 'Supervised the design and implementation of a Tri-Finger Robot. Focused on precise sensor systems, optimized kinematic algorithms, and advanced machine learning integration.',
+                how: 'Developed the conceptual framework for the Tri Finger Robot, defining major components and their interactions. Integrated advanced sensor systems, including force, position, and tactile sensors, to provide real-time feedback. Designed and implemented kinematic algorithms to ensure smooth and accurate movements of the robot\'s fingers. Utilized TensorFlow to develop and train models for improving robotic dexterity and precision in object manipulation. Conducted extensive testing and optimization to refine the robot\'s performance, ensuring high-precision object manipulation.',
+                result: 'Achieved high-precision object manipulation, allowing the robot to handle delicate tasks with ease. Enhanced robotic dexterity through the integration of advanced sensor systems and machine learning algorithms. The kinematic algorithms ensured smooth and accurate movements, significantly improving the robot\'s overall performance. The machine learning models allowed the robot to adapt to various manipulation tasks, improving its efficiency and effectiveness.'
+            },
+            {
+                id: 'computational-fluid-dynamics',
+                title: 'Applied Computational Fluid Dynamics',
+                shortDescription: 'Developed numerical models using ANSYS Fluent to understand fluid behavior, heat transfer, and vortex dynamics.',
+                imageUrl: 'https://placehold.co/600x400/ccddff/333333?text=CFD+Analysis',
+                what: 'The primary goal is to develop numerical models using ANSYS Fluent to better understand fluid behavior, heat transfer, and vortex dynamics in different engineering applications. Key studies included internal flow with thermal convection under Earth and Mars gravity, multiphase flow simulation of methane leakage, liquid droplet dynamics, and oscillating water columns, and external flow analysis investigating vortex shedding and lift force oscillations around different shapes.',
+                how: 'The projects were conducted using ANSYS Fluent and COMSOL Multiphysics. This involved defining computational domains and boundary conditions, mesh generation and refinement, implementing turbulence models (k-epsilon and k-omega), conducting time-dependent transient simulations, and analyzing results using contour plots, velocity streamlines, and force measurements.',
+                result: 'Thermal convection analysis showed slower heat dissipation under Mars gravity. Multiphase flow studies revealed methane leakage dynamics depend on boundary conditions and pressure gradients. Aerodynamic simulations demonstrated different vortex shedding patterns for elliptical cylinders. Compressible flow modeling confirmed supersonic jets produce higher velocity and lower temperatures. Overall, these projects provided data-driven optimizations for energy-efficient designs, safety improvements, and aerodynamic advancements.'
+            },
+            {
+                id: 'quadruped-robot-kinematics',
+                title: 'Inverse Kinematics Analysis of a Quadruped Robot',
+                shortDescription: 'Developed an inverse kinematics program for a quadruped robot using analytical and numerical methods.',
+                imageUrl: 'https://placehold.co/600x400/ffccdd/333333?text=Quadruped+Robot',
+                what: 'This project focused on the inverse kinematic analysis of a quadruped robot, computing the joint angles required for precise and stable movement. The aim was to develop an inverse kinematics model to improve the accuracy of leg positioning, allowing the robot to move smoothly across different terrains, for applications such as search and rescue, exploration, agriculture, and industrial automation.',
+                how: 'Applied analytical and numerical methods to compute inverse kinematics solutions. This included formulating transformation and kinematic matrices, deriving joint angle equations using algebraic and geometric techniques, developing MATLAB-based simulations for forward and inverse kinematics, implementing a Simulink model to analyze robotic motion, and validating results by simulating different leg positions to ensure desired trajectory tracking.',
+                result: 'Successfully developed a functional inverse kinematics model for the quadruped robot, enabling accurate and stable joint angle calculations. MATLAB and Simulink simulations confirmed high-precision trajectory tracking. The work provides a foundation for future advancements like dynamic motion analysis, real-time control systems, and terrain navigation enhancements, making quadruped robots more efficient for real-world applications.'
+            },
+            {
+                id: 'semiconductor-packaging',
+                title: 'Semiconductor Packaging: Advanced Techniques',
+                shortDescription: 'Researched thermal management, digital twin monitoring, and etching processes in semiconductor packaging.',
+                imageUrl: 'https://placehold.co/600x400/ecccff/333333?text=Semiconductor+Packaging',
+                what: 'Explored advanced semiconductor packaging techniques to enhance thermal management, anomaly detection, and etching processes. Focused on SiO2-embedded carbon nanofibers for better heat dissipation, digital twin technology for real-time defect detection, and advanced etching techniques like laser etching and reactive ion etching (RIE) for precise wafer-level packaging.',
+                how: 'Investigated and implemented three core advancements: Thermal Management (utilizing SiO2-embedded carbon nanofibers, thermal vias, heat spreaders, active cooling), Anomaly Detection (digital twin technology, optical inspections, AI-based imaging techniques), and Etching Techniques (employing laser etching and RIE).',
+                result: 'Findings demonstrated that SiO2-embedded carbon nanofibers enhance heat dissipation. Digital twin technology successfully detects anomalies, improving yield. Adoption of laser etching and RIE results in higher accuracy and reduced material waste. These advancements contribute to better performance, reliability, and sustainability in semiconductor packaging.'
+            },
+            {
+                id: 'modern-manufacturing',
+                title: 'Modern Manufacturing',
+                shortDescription: 'Focused on FEA and computational modeling of advanced manufacturing processes like LPBF, FDM, and SLA.',
+                imageUrl: 'https://placehold.co/600x400/ccffee/333333?text=Modern+Manufacturing',
+                what: 'The projects focused on the finite element analysis (FEA) and computational modeling of advanced manufacturing processes, specifically Laser Powder Bed Fusion (LPBF) Process (simulating thermal behavior of cast iron vs. structural steel), Fused Deposition Modeling (FDM) in 3D Printing (investigating thermal effects and heat transfer), and Photopolymerization in Stereolithography (SLA) (analyzing the effect of laser power and spot size on resin curing).',
+                how: 'The projects utilized FEA simulations in COMSOL and ANSYS to analyze heat transfer, temperature distribution, and material response. The methodology included defining material properties, setting up boundary conditions (laser power, scanning speed, convection, radiation), generating fine mesh grids, and running transient and steady-state thermal analyses. Comparisons were made for different materials to assess their thermal efficiency.',
+                result: 'LPBF simulations showed structural steel heated faster and more uniformly, while cast iron showed slower heat propagation. FDM simulations revealed Co-Cr retained heat longer, and polycarbonate cooled faster. SLA photopolymerization showed higher laser power increased cure depth, and larger spot size broadened the cured area but reduced depth. These findings help improve additive manufacturing efficiency, material selection, and laser-based processes.'
+            },
+            {
+                id: 'arduino-automated-system',
+                title: 'Arduino Based Automated System',
+                shortDescription: 'Developed an Arduino-based automated system for micro-porous sheet folding and heating in battery production.',
+                imageUrl: 'https://placehold.co/600x400/eefccf/333333?text=Arduino+Automation',
+                what: 'Developed an Arduino-based automatic micro-porous sheet folding and heating process for NCFP (Nickel Cadmium Fibre Plate) batteries. The primary aim was to enhance the efficiency and reliability of the battery production process.',
+                how: 'Utilized Arduino microcontroller to automate the micro-porous sheet folding and heating steps. Integrated sensors to monitor temperature, pressure, and alignment during the processes. Programmed the Arduino to control the timing, temperature, and pressure. Combined with mechanical components to facilitate precise movement of micro-porous sheets.',
+                result: 'Automation reduced manual intervention, leading to faster production cycles and increased throughput. Consistent and accurate folding and heating minimized variations, resulting in higher-quality batteries. Reduced the risk of human errors and ensured optimal temperature and pressure, contributing to consistent battery performance. Streamlined process reduced labor costs and increased overall production efficiency.'
+            },
+            {
+                id: 'project-rcrv',
+                title: 'Project - RCRV (Rail cum Road Vehicle)',
+                shortDescription: 'Designed the BIW framework for a Rail-Cum-Road Vehicle (RCRV) using SolidWorks with FEA simulations.',
+                imageUrl: 'https://placehold.co/600x400/ccddee/333333?text=RCRV+Design',
+                what: 'Worked on the BIW (Body in White) design for the Rail-Come-Road Vehicle (RCRV) shunter. Collaborated with project leaders and stakeholders to establish requirements and create design development documentation. Utilized SolidWorks software for the design process.',
+                how: 'Designed the BIW, incorporating considerations for strength, safety, and functionality. Collaborated with project leaders and stakeholders to gather input and refine the design concept. Utilized SolidWorks to create detailed 3D models. Conducted simulations and stress analyses using SolidWorks to ensure structural integrity and performance.',
+                result: 'Successfully designed a functional main chassis of RCRV Shunter that meets safety and performance standards. Effective collaboration ensured alignment with project goals and requirements. Utilizing SolidWorks enabled accurate and detailed design modeling, reducing errors. Simulations and Stress Analysis validated the BIW\'s structural soundness, contributing to a reliable and safe RCRV shunter design.'
+            }
+        ];
+
+        const projectsContainer = document.querySelector('#projects .grid');
+        const projectModal = document.getElementById('project-modal');
+        const closeModalButton = document.getElementById('close-modal-button');
+        const modalTitle = document.getElementById('modal-title');
+        const modalImage = document.getElementById('modal-image');
+        const modalOverview = document.getElementById('modal-overview');
+        const modalWhat = document.getElementById('modal-what');
+        const modalHow = document.getElementById('modal-how');
+        const modalResult = document.getElementById('modal-result');
+
+        // Dynamically create project cards
+        projects.forEach(project => {
+            const card = document.createElement('div');
+            card.className = 'bg-white p-6 rounded-xl shadow-lg border border-gray-200 transition duration-300 transform project-card cursor-pointer flex flex-col justify-between';
+            card.innerHTML = `
+                <img src="${project.imageUrl}" alt="${project.title}" class="rounded-lg mb-4 w-full h-48 object-cover">
+                <h3 class="text-2xl font-semibold mb-2 text-indigo-700">${project.title}</h3>
+                <p class="text-gray-700 text-lg mb-4">${project.shortDescription}</p>
+                <button data-project-id="${project.id}" class="open-modal-button bg-indigo-600 text-white px-6 py-2 rounded-full text-lg font-medium hover:bg-indigo-700 transition duration-300 self-start">
+                    Learn More <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            `;
+            projectsContainer.appendChild(card);
+        });
+
+        // Event listeners for opening modal
+        document.querySelectorAll('.open-modal-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const projectId = this.dataset.projectId;
+                const project = projects.find(p => p.id === projectId);
+
+                if (project) {
+                    modalTitle.textContent = project.title;
+                    modalImage.src = project.imageUrl;
+                    modalOverview.textContent = project.shortDescription;
+                    modalWhat.textContent = project.what;
+                    modalHow.textContent = project.how;
+                    modalResult.textContent = project.result;
+                    projectModal.classList.remove('hidden');
+                    document.body.classList.add('overflow-hidden'); // Prevent scrolling
+                }
+            });
+        });
+
+        // Event listener for closing modal
+        closeModalButton.addEventListener('click', function() {
+            projectModal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden'); // Allow scrolling
+        });
+
+        // Close modal if clicked outside
+        projectModal.addEventListener('click', function(e) {
+            if (e.target === projectModal) {
+                projectModal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
+</body>
+</html>
